@@ -1,8 +1,10 @@
-Facebook Desktop Notifications for Mac OS X
+Desktop Notifications for Facebook (OS X 10.7)
 ==============================================
 
 Adds Notifications to your desktop, alerting you when interesting activity happens on Facebook.
 
-https://www.facebook.com/notifier
+https://www.facebook.com/desktop.notifier
 
-Note: This software is experimental and has only been tested on Mac OS X 10.5
+Note: This software is sill in BETA and has only been tested on OS X Lion 10.7.2 
+
+Please submit bugs on GitHub.
