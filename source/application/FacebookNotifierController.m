@@ -98,9 +98,7 @@ FBConnect* connectSession;
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
 {
-  //automatically check for updates
-  [updater setDelegate:self];
-  [updater checkForUpdatesInBackground];
+
 
   // check for future network connectivity changes
   [[NSNotificationCenter defaultCenter] addObserver:self
@@ -286,28 +284,6 @@ FBConnect* connectSession;
   // highly recommended to request offline access, since we live on the desktop.
   [connectSession loginWithRequiredPermissions:[NSSet setWithObjects:@"manage_mailbox", nil]
                            optionalPermissions:[NSSet setWithObjects:@"publish_stream", @"offline_access", nil]];
-}
-
-// Sent when a valid update is found by the update driver.
-- (void)updater:(SUUpdater *)suUpdater didFindValidUpdate:(SUAppcastItem *)update {
-  NSLog(@"update found version: %@", [update versionString]);
-}
-
-// Sent when a valid update is not found.
-- (void)updaterDidNotFindUpdate:(SUUpdater *)update
-{
-  NSLog(@"checked for update, and no update found");
-}
-
-// Sent when the appcast has loaded
-- (void)updater:(SUUpdater *)update didFinishLoadingAppcast:(SUAppcast *)appcast {
-  NSMutableArray* loadedVersions = [[NSMutableArray alloc] init];
-  for (SUAppcastItem* item in [appcast items]) {
-    [loadedVersions addObject:[item versionString]];
-  }
-  NSLog(@"appcast loaded. your version: %@, loaded versions: %@",
-        [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"],
-        [loadedVersions componentsJoinedByString:@", "]);
 }
 
 #pragma mark FB Session delegate methods
