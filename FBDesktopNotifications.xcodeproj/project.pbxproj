@@ -22,6 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		330DE728148D1E6C000E336B /* FBCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330DE726148D1E2C000E336B /* FBCocoa.framework */; };
+		330DE72A148D1EAD000E336B /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330DE729148D1EAD000E336B /* Growl.framework */; };
 		53060002103CFAF70061C722 /* ImageDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 53060001103CFAF70061C722 /* ImageDictionary.m */; };
 		53060106103D16D10061C722 /* FBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 53060105103D16D10061C722 /* FBObject.m */; };
 		5306016B103D1C940061C722 /* QueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306016A103D1C940061C722 /* QueryManager.m */; };
@@ -104,8 +106,6 @@
 		53A2AFBC10AAD41B008079FB /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A2AFBB10AAD41B008079FB /* libicucore.dylib */; };
 		53A2B01210AB9AE1008079FB /* AsyncImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A2B01110AB9AE1008079FB /* AsyncImage.m */; };
 		53DAD12C1056F67E00E664D2 /* NSDictionary+.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DAD12B1056F67E00E664D2 /* NSDictionary+.m */; };
-		53DAD1CA10574F1100E664D2 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DAD1C910574F1100E664D2 /* Growl.framework */; };
-		53DAD1D210574F9200E664D2 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DAD1C910574F1100E664D2 /* Growl.framework */; };
 		53FC73DC107E82B500EFAABE /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = 53FC73DB107E82B500EFAABE /* note.png */; };
 		53FC73DF107E836300EFAABE /* fb_offline.png in Resources */ = {isa = PBXBuildFile; fileRef = 53FC73DE107E836300EFAABE /* fb_offline.png */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -114,9 +114,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		334C4A45148D14D900D8FB9A /* PBXContainerItemProxy */ = {
+		330DE725148D1E2C000E336B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 334C4A3E148D14D900D8FB9A /* FBCocoa.xcodeproj */;
+			containerPortal = 330DE71E148D1E2B000E336B /* FBCocoa.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = FBCocoa;
@@ -137,7 +137,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				53DAD1D210574F9200E664D2 /* Growl.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,9 +147,10 @@
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		330DE71E148D1E2B000E336B /* FBCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FBCocoa.xcodeproj; path = "../leebyron-fb-cocoa-8f0465f/FBCocoa.xcodeproj"; sourceTree = "<group>"; };
+		330DE729148D1EAD000E336B /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = "../Growl-1.3.1-SDK/Framework/Growl.framework"; sourceTree = "<group>"; };
 		334C4A3C148D145A00D8FB9A /* FBCocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBCocoa.h; sourceTree = "<group>"; };
 		334C4A3D148D145A00D8FB9A /* FBCocoa_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBCocoa_Prefix.pch; sourceTree = "<group>"; };
-		334C4A3E148D14D900D8FB9A /* FBCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FBCocoa.xcodeproj; path = ../FBCocoa/FBCocoa.xcodeproj; sourceTree = "<group>"; };
 		53060000103CFAF70061C722 /* ImageDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDictionary.h; sourceTree = "<group>"; };
 		53060001103CFAF70061C722 /* ImageDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDictionary.m; sourceTree = "<group>"; };
 		53060104103D16D10061C722 /* FBObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBObject.h; sourceTree = "<group>"; };
@@ -283,7 +283,6 @@
 		53A2B01110AB9AE1008079FB /* AsyncImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImage.m; sourceTree = "<group>"; };
 		53DAD12A1056F67E00E664D2 /* NSDictionary+.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+.h"; sourceTree = "<group>"; };
 		53DAD12B1056F67E00E664D2 /* NSDictionary+.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+.m"; sourceTree = "<group>"; };
-		53DAD1C910574F1100E664D2 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = resources/Growl.framework; sourceTree = "<group>"; };
 		53FC73DB107E82B500EFAABE /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = note.png; path = resources/images/note.png; sourceTree = "<group>"; };
 		53FC73DE107E836300EFAABE /* fb_offline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fb_offline.png; path = resources/images/fb_offline.png; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Facebook Notifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Facebook Notifications.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,12 +295,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330DE72A148D1EAD000E336B /* Growl.framework in Frameworks */,
+				330DE728148D1E6C000E336B /* FBCocoa.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				935340461017F5CB002C6CBD /* QuartzCore.framework in Frameworks */,
 				935340E81018CCAF002C6CBD /* ApplicationServices.framework in Frameworks */,
 				53184DD0103444A700C0FFA4 /* Carbon.framework in Frameworks */,
 				537DEB11103A179F00EE3530 /* SystemConfiguration.framework in Frameworks */,
-				53DAD1CA10574F1100E664D2 /* Growl.framework in Frameworks */,
 				53A2AFBC10AAD41B008079FB /* libicucore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +340,8 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53DAD1C910574F1100E664D2 /* Growl.framework */,
+				330DE729148D1EAD000E336B /* Growl.framework */,
+				330DE71E148D1E2B000E336B /* FBCocoa.xcodeproj */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -356,7 +357,6 @@
 		29B97314FDCFA39411CA2CEA /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
-				334C4A3E148D14D900D8FB9A /* FBCocoa.xcodeproj */,
 				334C4A3B148D145A00D8FB9A /* fbcocoa */,
 				080E96DDFE201D6D7F000001 /* source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -391,6 +391,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		330DE71F148D1E2B000E336B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				330DE726148D1E2C000E336B /* FBCocoa.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		334C4A3B148D145A00D8FB9A /* fbcocoa */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,14 +407,6 @@
 			);
 			name = fbcocoa;
 			path = source/fbcocoa;
-			sourceTree = "<group>";
-		};
-		334C4A3F148D14D900D8FB9A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				334C4A46148D14D900D8FB9A /* FBCocoa.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5306032E103D36AC0061C722 /* system */ = {
@@ -715,8 +715,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 334C4A3F148D14D900D8FB9A /* Products */;
-					ProjectRef = 334C4A3E148D14D900D8FB9A /* FBCocoa.xcodeproj */;
+					ProductGroup = 330DE71F148D1E2B000E336B /* Products */;
+					ProjectRef = 330DE71E148D1E2B000E336B /* FBCocoa.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -728,11 +728,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		334C4A46148D14D900D8FB9A /* FBCocoa.framework */ = {
+		330DE726148D1E2C000E336B /* FBCocoa.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = FBCocoa.framework;
-			remoteRef = 334C4A45148D14D900D8FB9A /* PBXContainerItemProxy */;
+			remoteRef = 330DE725148D1E2C000E336B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -908,6 +908,8 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/resources\"",
 					"\"$(SRCROOT)/../fb-cocoa/build/Release\"",
+					"\"$(SRCROOT)/../../../Downloads/Growl-1.3.1-SDK/Framework\"",
+					"\"$(SRCROOT)/../Growl-1.3.1-SDK/Framework\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
@@ -932,6 +934,8 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/resources\"",
 					"\"$(SRCROOT)/../fb-cocoa/build/Release\"",
+					"\"$(SRCROOT)/../../../Downloads/Growl-1.3.1-SDK/Framework\"",
+					"\"$(SRCROOT)/../Growl-1.3.1-SDK/Framework\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
