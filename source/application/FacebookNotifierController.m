@@ -39,7 +39,7 @@ FBConnect* connectSession;
 {
   self = [super init];
   if (self) {
-    connectSession = [[FBConnect sessionWithAPIKey:@"4a280b1a1f1e4dae116484d677d7ed25"
+    connectSession = [[FBConnect sessionWithAPIKey:@"1e6dfa289a268191cb8b9c812554fe3f"
                                           delegate:self] retain];
 
     notifications = [[NotificationManager alloc] init];

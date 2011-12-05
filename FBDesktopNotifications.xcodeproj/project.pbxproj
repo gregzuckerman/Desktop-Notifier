@@ -177,7 +177,7 @@
 		53060585103F9EB40061C722 /* CTGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGradient.h; sourceTree = "<group>"; };
 		53060586103F9EB40061C722 /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRKeyCodeTransformer.h; sourceTree = "<group>"; };
 		53060587103F9EB40061C722 /* SRRecorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderControl.m; sourceTree = "<group>"; };
-		53060597103FA0580061C722 /* ShortcutRecorder.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ShortcutRecorder.strings; path = resources/ShortcutRecorder.strings; sourceTree = "<group>"; };
+		53060597103FA0580061C722 /* ShortcutRecorder.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ShortcutRecorder.strings; path = resources/ShortcutRecorder.strings; sourceTree = "<group>"; };
 		530605C1103FB5340061C722 /* StatusKeyShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusKeyShortcut.h; sourceTree = "<group>"; };
 		530605C2103FB5340061C722 /* StatusKeyShortcut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusKeyShortcut.m; sourceTree = "<group>"; };
 		5306F85C103B7A0B0061C722 /* silhouette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = silhouette.png; path = resources/images/silhouette.png; sourceTree = "<group>"; };

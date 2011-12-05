@@ -4,10 +4,11 @@
 //
 //  Copyright 2009 Facebook Inc. All rights reserved.
 //
+//  Edited by Greg Zuckerman on 5/12/2011.
+//
 
 #import <Cocoa/Cocoa.h>
 #import <FBCocoa/FBCocoa.h>
-#import <Sparkle/Sparkle.h>
 #import "BubbleManager.h"
 #import "MenuManager.h"
 #import "NotificationManager.h"
@@ -22,8 +23,6 @@
 
 @interface FacebookNotifierController : NSObject <FBConnectDelegate>
 {
-  IBOutlet SUUpdater*  updater;
-
   NotificationManager* notifications;
   MessageManager*      messages;
   QueryManager*        queryManager;
