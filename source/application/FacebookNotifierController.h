@@ -4,12 +4,10 @@
 //
 //  Copyright 2009 Facebook Inc. All rights reserved.
 //
-//  Editied by Greg Zuckerman
-//
-//
 
 #import <Cocoa/Cocoa.h>
 #import <FBCocoa/FBCocoa.h>
+#import <Sparkle/Sparkle.h>
 #import "BubbleManager.h"
 #import "MenuManager.h"
 #import "NotificationManager.h"
@@ -24,6 +22,8 @@
 
 @interface FacebookNotifierController : NSObject <FBConnectDelegate>
 {
+  IBOutlet SUUpdater*  updater;
+
   NotificationManager* notifications;
   MessageManager*      messages;
   QueryManager*        queryManager;
@@ -31,8 +31,6 @@
   NSMutableDictionary* names;
   ImageDictionary*     profilePics;
   ImageDictionary*     appIcons;
-
-  NSURL*               baseURL;
 }
 
 @property(retain) NotificationManager*  notifications;
@@ -40,7 +38,6 @@
 @property(retain) NSMutableDictionary*  names;
 @property(retain) ImageDictionary*      profilePics;
 @property(retain) ImageDictionary*      appIcons;
-@property(copy, nonatomic) NSURL*       baseURL;
 
 - (void)invalidate;
 - (void)markEverythingSeen;

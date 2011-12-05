@@ -31,7 +31,7 @@
 
 @implementation FacebookNotifierController
 
-@synthesize notifications, messages, names, profilePics, appIcons, baseURL;
+@synthesize notifications, messages, names, profilePics, appIcons;
 
 FBConnect* connectSession;
 
@@ -39,10 +39,8 @@ FBConnect* connectSession;
 {
   self = [super init];
   if (self) {
-    connectSession = [[FBConnect sessionWithAPIKey:@"176007955829560"
+    connectSession = [[FBConnect sessionWithAPIKey:@"4a280b1a1f1e4dae116484d677d7ed25"
                                           delegate:self] retain];
-    NSString* baseURLString = [NSString stringWithFormat:@"%@://www.facebook.com", [connectSession scheme]];
-    [self setBaseURL:[NSURL URLWithString:baseURLString]];
 
     notifications = [[NotificationManager alloc] init];
     messages      = [[MessageManager alloc] init];
@@ -94,8 +92,6 @@ FBConnect* connectSession;
   [names          release];
   [profilePics    release];
   [appIcons       release];
-
-  [baseURL        release];
 
   [super dealloc];
 }
@@ -173,7 +169,7 @@ FBConnect* connectSession;
 - (IBAction)menuShowNewsFeed:(id)sender
 {
   [[NSWorkspace sharedWorkspace] openURL:
-   [NSURL URLWithString:@"/home.php" relativeToURL:baseURL]];
+   [NSURL URLWithString:@"http://www.facebook.com/home.php"]];
 }
 
 - (IBAction)menuShowProfile:(id)sender
@@ -185,13 +181,13 @@ FBConnect* connectSession;
 - (IBAction)menuShowInbox:(id)sender
 {
   [[NSWorkspace sharedWorkspace] openURL:
-   [NSURL URLWithString:@"/inbox" relativeToURL:baseURL]];
+   [NSURL URLWithString:@"http://www.facebook.com/inbox"]];
 }
 
 - (IBAction)menuComposeMessage:(id)sender
 {
   [[NSWorkspace sharedWorkspace] openURL:
-   [NSURL URLWithString:@"/inbox?compose" relativeToURL:baseURL]];
+   [NSURL URLWithString:@"http://www.facebook.com/inbox?compose"]];
 }
 
 - (IBAction)beginUpdateStatus:(id)sender
@@ -228,14 +224,14 @@ FBConnect* connectSession;
   [message markAsRead];
 
   // load inbox url
-  NSURL *inboxURL = [NSURL URLWithString:[NSString stringWithFormat:@"/inbox/?tid=%@",
-                                                                    [message objectForKey:@"thread_id"]] relativeToURL:baseURL];
+  NSURL *inboxURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.facebook.com/inbox/?tid=%@",
+                                                                    [message objectForKey:@"thread_id"]]];
   [[NSWorkspace sharedWorkspace] openURL:inboxURL];
 }
 
 - (IBAction)menuShowAllNotifications:(id)sender
 {
-  [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"/notifications.php" relativeToURL:baseURL]];
+  [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.facebook.com/notifications.php"]];
 }
 
 - (IBAction)menuMarkAsReadAllNotifications:(id)sender
@@ -293,26 +289,26 @@ FBConnect* connectSession;
 }
 
 // Sent when a valid update is found by the update driver.
-//- (void)updater:(SUUpdater *)suUpdater didFindValidUpdate:(SUAppcastItem *)update {
-//  NSLog(@"update found version: %@", [update versionString]);
-//}
+- (void)updater:(SUUpdater *)suUpdater didFindValidUpdate:(SUAppcastItem *)update {
+  NSLog(@"update found version: %@", [update versionString]);
+}
 
 // Sent when a valid update is not found.
-//- (void)updaterDidNotFindUpdate:(SUUpdater *)update
-//{
-///  NSLog(@"checked for update, and no update found");
-//}
+- (void)updaterDidNotFindUpdate:(SUUpdater *)update
+{
+  NSLog(@"checked for update, and no update found");
+}
 
 // Sent when the appcast has loaded
-//- (void)updater:(SUUpdater *)update didFinishLoadingAppcast:(SUAppcast *)appcast {
-//  NSMutableArray* loadedVersions = [[NSMutableArray alloc] init];
-//  for (SUAppcastItem* item in [appcast items]) {
-//    [loadedVersions addObject:[item versionString]];
-//  }
-//  NSLog(@"appcast loaded. your version: %@, loaded versions: %@",
-//        [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"],
-//        [loadedVersions componentsJoinedByString:@", "]);
-//}
+- (void)updater:(SUUpdater *)update didFinishLoadingAppcast:(SUAppcast *)appcast {
+  NSMutableArray* loadedVersions = [[NSMutableArray alloc] init];
+  for (SUAppcastItem* item in [appcast items]) {
+    [loadedVersions addObject:[item versionString]];
+  }
+  NSLog(@"appcast loaded. your version: %@, loaded versions: %@",
+        [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"],
+        [loadedVersions componentsJoinedByString:@", "]);
+}
 
 #pragma mark FB Session delegate methods
 - (void)facebookConnectLoggedIn:(FBConnect*)connect withError:(NSError*)err

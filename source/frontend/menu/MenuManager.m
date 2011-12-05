@@ -3,7 +3,6 @@
 //  Facebook
 //
 //  Created by Lee Byron on 7/29/09.
-//  Editied by Greg Zuckerman on 5/12/11.
 //  Copyright 2009 Facebook. All rights reserved.
 //
 
@@ -19,9 +18,9 @@
 #import "NSImage+.h"
 
 
-#define kMaxNotifications 10
+#define kMaxNotifications 12
 #define kMinNotifications 5
-#define kMaxMessages 5
+#define kMaxMessages 6
 #define kMinMessages 3
 #define kMaxStringLen 45
 #define kUserIconSize 15.0
